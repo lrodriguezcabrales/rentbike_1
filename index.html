@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Rent Bike</title>
-	<script src="js/script.js"></script>
-</head>
-<body>
-	<div>
-		<form name="formrent">
-			<div class="field-form">
-				<label>Nombres: </label>
-				<input type="text" id="name" name="name" placeholder="Nombre">
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rent Bike</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="init">
+			<div class="content-logo">
+				<img src="images/logo.jpg" width="260px">
 			</div>
-			<div class="field-form">
-				<label>Apellidos:</label>
-				<input type="text" name="lastname" placeholder="Apellido">
+			<div class="content-menu">
+				<ul class="menu">
+					<li class="item"><a href="#">Inicio</a></li>
+					<li class="item"><a href="#">Reservar</a></li>
+					<li class="item"><a href="#">Galeria</a></li >
+					<li class="item"><a href="#">Reglas</a></li>
+				</ul>
 			</div>
-			<div class="field-form">
-				<label>Correo:</label>
-				<input type="email" name="email" placeholder="Correo">
+		</div>
+		<div class="content">
+			<div class="slogan">
+				<h1>RentBike</h1>
+				<h3>Pedale la ciudad</h3>
+				<div class="button">
+					<a href="#">Reservar</a>
+				</div>
 			</div>
-			<div class="field-form">
-				<label>Telefono</label>
-				<input type="text" name="phone" placeholder="Telefono">
+			<strong>Arriendo de bicicletas en Cartagena</strong>
+
+			<p>La ciudad se descubre en bicicleta, RentBike arrienda bicicletas urbanas por día o por semana. Reserva y ven por tu paseo en bici</p>
+
+			<div class="time">
+				<strong>Horarios</strong>
+				<p>Del lunes a domingo de 8:00am a 11:00pm</p>
 			</div>
-			<div class="field-form">
-				<label>Celular</label>
-				<input type="text" name="phone" placeholder="Telefono">
-			</div>
-			<div class="field-form">
-				<label>Fecha</label>
-				<input type="date" name="startdate" >
-			</div>
-			<div class="field-form">
-				<label>Hora inicio</label>
-				<input type="time" name="starttime" >
-			</div>
-			<div class="field-form">
-				<label>Hora final</label>
-				<input type="time" name="endtime" >
-			</div>
-			<button type="button" onclick="validar()">Enviar</button>
-		</form>
-	</div>
-</body>
+		</div>
+	</body>
 </html>
