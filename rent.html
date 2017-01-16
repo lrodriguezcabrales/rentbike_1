@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Rent Bike</title>
-	<script src="js/script.js"></script>
-</head>
-<body>
-	<div>
-		<form name="formrent">
-			<div class="field-form">
-				<label>Nombres: </label>
-				<input type="text" id="name" name="name" placeholder="Nombre">
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rent Bike</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="init">
+			<div class="content-logo">
+				<img src="images/logo.jpg" width="260px">
 			</div>
-			<div class="field-form">
-				<label>Apellidos:</label>
-				<input type="text" name="lastname" placeholder="Apellido">
+			<div class="content-menu">
+				<ul class="menu">
+					<li class="item"><a href="index.html">Inicio</a></li>
+					<li class="item"><a href="rent.html">Reservar</a></li>
+					<li class="item"><a href="#">Galeria</a></li >
+					<li class="item"><a href="#">Reglas</a></li>
+				</ul>
 			</div>
-			<div class="field-form">
-				<label>Correo:</label>
-				<input type="email" name="email" placeholder="Correo">
-			</div>
-			<div class="field-form">
-				<label>Telefono</label>
-				<input type="text" name="phone" placeholder="Telefono">
-			</div>
-			<div class="field-form">
-				<label>Celular</label>
-				<input type="text" name="phone" placeholder="Telefono">
-			</div>
-			<div class="field-form">
-				<label>Fecha</label>
-				<input type="date" name="startdate" >
-			</div>
-			<div class="field-form">
-				<label>Hora inicio</label>
-				<input type="time" name="starttime" >
-			</div>
-			<div class="field-form">
-				<label>Hora final</label>
-				<input type="time" name="endtime" >
-			</div>
-			<button type="button" onclick="validar()">Enviar</button>
-		</form>
-	</div>
-</body>
+		</div>
+		<div class="content">
+			<form class="form" name="formrent">
+				<div class="field-form">
+					<label>Nombres: </label>
+					<input type="text" id="name" name="nombres" placeholder="Nombre">
+				</div>
+				<div class="field-form">
+					<label>Apellidos:</label>
+					<input type="text" id ="lastname" name="apellidos" placeholder="Apellido">
+				</div>
+				<div class="field-form">
+					<label>Correo:</label>
+					<input type="email" id="email" name="email" placeholder="Correo">
+				</div>
+				<div class="field-form">
+					<label>Celular</label>
+					<input type="text" id="movil" name="celular" placeholder="Telefono">
+				</div>
+				<div class="field-form">
+					<label>Fecha</label>
+					<input type="date" name="startdate" >
+				</div>
+				<div class="field-form">
+					<label>Hora inicio</label>
+					<input type="time" name="starttime" >
+				</div>
+				<div class="field-form">
+					<label>Hora final</label>
+					<input type="time" name="endtime" >
+				</div>
+				<button type="button" onclick="validar()">Enviar</button>
+			</form>
+		</div>
+	</body>
 </html>
