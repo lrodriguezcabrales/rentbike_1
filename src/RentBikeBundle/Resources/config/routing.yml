@@ -1,0 +1,4 @@
+save_user:
+    path: rentbike/user
+    defaults: { _controller: RentBikeBundle:User:save }
+    methods:  [POST]
