@@ -1,0 +1,27 @@
+rent_bike_homepage:
+    pattern:  /
+    defaults: { _controller: RentBikeBundle:Default:index }
+
+rent_bike_save_user:
+    pattern: /user/save
+    defaults: {_controller: RentBikeBundle:Users:save}
+
+rent_bike_list_user:
+    pattern: /user/list
+    defaults: {_controller: RentBikeBundle:Users:list}
+
+rent_bike_save_bike:
+    pattern: /bike/save
+    defaults: {_controller: RentBikeBundle:Bike:save}
+
+rent_bike_list_bike:
+    pattern: /bike/list
+    defaults: {_controller: RentBikeBundle:Bike:list}
+
+rent_bike_get_bike:
+    pattern: /bike/{id}
+    defaults: {_controller: RentBikeBundle:Bike:get}
+
+rent_bike_update_bike:
+    pattern: /bike/update/{id}
+    defaults: {_controller: RentBikeBundle:Bike:update}
