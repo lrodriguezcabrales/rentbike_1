@@ -11,6 +11,33 @@ use RentBike\RentBikeBundle\Entity\Users;
 
 class UsersController extends Controller
 {
+
+	public function loginAction($value='')
+	{
+		$em = $this->get("doctrine")->getManager();
+
+        $request = $this->get('request');
+
+        //Obtenemos los datos que nos envia el cliente
+        $data = $request->getContent();
+        $data = json_decode($data, true);
+
+        $email = $data['email'];
+        $password = $data['password'];
+
+        $user = $em->getRepository('RentBikeBundle:Users')->findBy(array('email'=>$email));
+
+        if($user){
+        	if($user->getPassword() == $password){
+        		echo "Acceso correcto";
+        	}else{
+        		echo "Contraseña errada";
+        	}
+        }else{
+        	echo "El usuario no existe";
+        }
+	}
+
 	/**
 	 * Guardar un usuario 
 	 */

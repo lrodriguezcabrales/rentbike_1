@@ -2,6 +2,10 @@ rent_bike_homepage:
     pattern:  /
     defaults: { _controller: RentBikeBundle:Default:index }
 
+rent_bike_login:
+    pattern: /login
+    defaults: {_controller: RentBikeBundle:Users:login}
+
 rent_bike_save_user:
     pattern: /user/save
     defaults: {_controller: RentBikeBundle:Users:save}
