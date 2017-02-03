@@ -12,9 +12,9 @@ use RentBike\RentBikeBundle\Entity\Users;
 class UsersController extends Controller
 {
 
-	public function loginAction($value='')
-	{
-		$em = $this->get("doctrine")->getManager();
+	public function loginAction()
+    {
+    	$em = $this->get("doctrine")->getManager();
 
         $request = $this->get('request');
 
@@ -22,21 +22,26 @@ class UsersController extends Controller
         $data = $request->getContent();
         $data = json_decode($data, true);
 
+        //print_r($data);
+
         $email = $data['email'];
         $password = $data['password'];
 
-        $user = $em->getRepository('RentBikeBundle:Users')->findBy(array('email'=>$email));
+        $user = $em->getRepository('RentBikeBundle:Users')->findOneBy(array('email'=>$email));
+
+        //print_r($user);
+
 
         if($user){
         	if($user->getPassword() == $password){
-        		echo "Acceso correcto";
+        		return new JsonResponse(array('status'=> 200, 'msj' =>'Acceso Correcto'));
         	}else{
-        		echo "Contraseña errada";
+        		return new JsonResponse(array('status'=> 500, 'msj' =>'Contraseña errada'));
         	}
         }else{
-        	echo "El usuario no existe";
+        	return new JsonResponse(array('status'=> 500, 'msj' =>'El usuario no existe'));
         }
-	}
+    }
 
 	/**
 	 * Guardar un usuario 
