@@ -14,6 +14,10 @@ rent_bike_list_user:
     pattern: /user/list
     defaults: {_controller: RentBikeBundle:Users:list}
 
+rent_bike_search_user:
+    pattern: /user/search/{text}
+    defaults: {_controller: RentBikeBundle:Users:searchUser}
+
 rent_bike_save_bike:
     pattern: /bike/save
     defaults: {_controller: RentBikeBundle:Bike:save}
