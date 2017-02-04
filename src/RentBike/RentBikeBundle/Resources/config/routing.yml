@@ -33,3 +33,19 @@ rent_bike_get_bike:
 rent_bike_update_bike:
     pattern: /bike/update/{id}
     defaults: {_controller: RentBikeBundle:Bike:update}
+
+rent_bike_search_bike:
+    pattern: /bike/search/{text}
+    defaults: {_controller: RentBikeBundle:Bike:searchBike}
+
+rent_bike_reserve_save:
+    pattern: /reserve/save
+    defaults: {_controller: RentBikeBundle:Reserve:save}
+
+rent_bike_reserve_list:
+    pattern: /reserve/list
+    defaults: {_controller: RentBikeBundle:Reserve:list}
+
+rent_bike_reserve_search:
+    pattern: /reserve/search/{text}
+    defaults: {_controller: RentBikeBundle:Reserve:searchReserve}

@@ -123,8 +123,28 @@ class BikeController extends Controller
 
 	}
 
-	public function searchBike()
-	{
-		# code...
-	}
+    public function searchBikeAction($text)
+    {
+        $em = $this->get("doctrine")->getManager();
+
+        $request = $this->get('request');
+
+        //Obtenemos los datos que nos envia el cliente
+        $data = $request->getContent();
+        $data = json_decode($data, true);
+
+     	$query = $em->createQuery("SELECT b FROM RentBikeBundle:Bike b
+                WHERE b.code LIKE '%".$text."%' 
+                OR b.description LIKE '%".$text."%'");
+
+        $data = $query->getArrayResult();   
+
+        //print_r($data);
+
+        //if($data){
+            return new JsonResponse(array('total' => count($data), 'data' => $data));
+        //}else{
+            //return new JsonResponse(array('total' => count($data), 'data' => $data));
+        //}
+    }
 }
