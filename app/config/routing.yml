@@ -1,0 +1,6 @@
+rent_bike:
+    resource: "@RentBikeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
