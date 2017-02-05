@@ -38,7 +38,7 @@ class BikeController extends Controller
 
         	$bike->setCode($data['code']);
         	$bike->setDescription($data['description']);
-        	$bike->setState('DISPONIBLE');
+        	$bike->setState($data['state']);
 
         	$em->persist($bike);
         	$em->flush();
